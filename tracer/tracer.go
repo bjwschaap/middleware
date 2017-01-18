@@ -38,7 +38,7 @@ func (tm *tracerMiddleware) Serve(ctx *iris.Context) {
 	parent.Finish()
 }
 
-// New returns the logger middleware
+// New returns the Zipkin middleware
 // receives optional configs(logger.Config)
 func New(cfg ...Config) iris.HandlerFunc {
 	c := DefaultConfig().Merge(cfg)
